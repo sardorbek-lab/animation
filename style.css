@@ -1,0 +1,187 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#12afee, #a8e2f9);
+    overflow: hidden;
+
+}
+
+/* Cloud */
+
+.cloud{
+    width: 200px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation-name: cloud;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+@keyframes cloud {
+    0%{
+        left: -100px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.cloud::before{
+    content: "";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -30px;
+    animation-duration: 10s;
+    left: 30px;
+}
+.cloud::after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -40px;
+    left: 80px;
+    margin-top: 15px;
+    animation-duration: 16s;
+}
+.cloud2{
+    top: 200px;
+    left: 80%;
+    animation-name: cloud2;
+    background-color: #fff;
+    z-index: -1;
+}
+@keyframes cloud2 {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -200px;
+    }
+}
+
+
+
+.cloud3{
+    top: 50px;
+    left: 80%;
+    animation-name: cloud3;
+    background-color: #fff;
+    animation-duration: 12s;
+    z-index: -1;
+    /* animation-delay: 3s; */
+}
+@keyframes cloud3 {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -300px;
+    }
+}
+
+
+
+
+
+/* yol */
+
+.yol img{
+    height: 140px;
+    width: 1780px;
+    position: relative;
+    top: 650px;
+    z-index: -1;
+
+}
+
+/* sun */
+
+.sun{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    bottom: -100px;
+    left: 30%;
+    animation: sun 15s linear 1s infinite alternate;
+    z-index: -1;
+}
+@keyframes sun {
+    0%{
+        bottom: -100px;
+        background-color: rgb(255, 72, 6);
+    }
+    40%{
+        background-color: rgb(248, 199, 22);
+        box-shadow: 0 0 80px 0 yellow;
+    }
+    100%{
+        bottom: 80%;
+        background-color: rgb(215, 215, 20);
+        box-shadow: 0 0 190px 0 yellow;
+    }
+}
+
+/* plane */
+
+.plane img{
+    width: 400px;
+    position: absolute;
+    top: 00px;
+    left: 100px;
+    animation: plane 10s linear  both infinite;
+}
+
+
+@keyframes plane {
+    0%{
+        left: -500px;
+        top: 80%;
+        
+    }
+    50%{
+        top: 75%;
+        transform: rotate(-0deg)
+    }
+    60%{
+        top: 70%;
+        transform: rotate(-10deg)
+    }
+    100%{
+        left: 100%;
+        top: 10%;
+    }
+}
+
+@keyframes air {
+    0%{
+        left: -00px;
+        top: 10%;
+        
+    }
+    50%{
+        
+    }
+    100%{
+        left: 100%;
+        top: 10%;
+    }
+}
